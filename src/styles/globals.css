@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* ── Decirle a Tailwind v4 dónde escanear clases ── */
+@source "../../app/**/*.{ts,tsx}";
+@source "../../src/**/*.{ts,tsx}";
+
+/* ── Variables CSS del tema SISA ── */
+:root {
+  --sisa-blue:      #2E7CF6;
+  --sisa-green:     #34C759;
+  --sisa-red:       #FF453A;
+  --sisa-amber:     #FFB800;
+  --sisa-gray:      #C5C5C5;
+  --bg-page:        #F2F4F7;
+  --bg-card:        #FFFFFF;
+  --text-primary:   #1A1A2E;
+  --text-secondary: #6B7280;
+  --border-color:   #E5E7EB;
+  --nav-height:     64px;
+  --topbar-height:  64px;
+}
+
+/* ── Dark mode (activado con clase .dark en <html>) ── */
+.dark {
+  --bg-page:        #0F1117;
+  --bg-card:        #1C1E26;
+  --text-primary:   #F2F2F7;
+  --text-secondary: #8E8E93;
+  --border-color:   #2C2E38;
+}
+
+/* ── Extender el tema de Tailwind v4 ── */
+@theme {
+  /* Colores SISA */
+  --color-sisa-blue:  #2E7CF6;
+  --color-sisa-green: #34C759;
+  --color-sisa-red:   #FF453A;
+  --color-sisa-amber: #FFB800;
+  --color-sisa-gray:  #C5C5C5;
+
+  /* Sombras personalizadas */
+  --shadow-card:       0 2px 12px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 6px 20px rgba(0,0,0,0.12);
+  --shadow-modal:      0 20px 60px rgba(0,0,0,0.18);
+  --shadow-nav:        0 -1px 12px rgba(0,0,0,0.06);
+  --shadow-fab:        0 4px 16px rgba(46,124,246,0.40);
+
+  /* Border radius extra */
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+
+  /* Spacing extra */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-88: 22rem;
+
+  /* Ancho máximo para vista móvil */
+  --width-mobile: 430px;
+  --width-tablet: 768px;
+
+  /* Animaciones */
+  --animate-slide-up:      slide-up 0.3s cubic-bezier(0.32,0.72,0,1);
+  --animate-slide-down:    slide-down 0.25s ease-out;
+  --animate-fade-in:       fade-in 0.2s ease-out;
+  --animate-scale-in:      scale-in 0.2s ease-out;
+  --animate-bounce-subtle: bounce-subtle 0.2s ease-in-out;
+
+  /* Keyframes */
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+  }
+  @keyframes slide-down {
+    from { transform: translateY(-100%); }
+    to   { transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes scale-in {
+    from { transform: scale(0.95); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+  }
+  @keyframes bounce-subtle {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(0.96); }
+  }
+}
+
+/* ── Base global dentro de @layer base ── */
+/* Esto se mezcla con el Preflight de Tailwind en la capa correcta  */
+/* y NO pisará tus utilidades ni componentes                         */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+  }
+
+  /* Scrollbars personalizados */
+  ::-webkit-scrollbar       { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+}
+
+/* ── Utilitarios personalizados ── */
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility truncate-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* ── Componentes de layout ── */
+@layer components {
+  /* Contenedor principal — centra en desktop */
+  .app-container {
+    width: 100%;
+    max-width: 430px;
+    margin-inline: auto;
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--bg-page);
+  }
+
+  @media (min-width: 768px) {
+    .app-container {
+      max-width: 48rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .app-container {
+      max-width: none;
+    }
+  }
+
+  /* Área de contenido con padding para TopBar + BottomNav */
+  .page-content {
+    padding-top: var(--topbar-height);
+    padding-bottom: calc(var(--nav-height) + 1rem);
+    padding-inline: 1rem;
+    min-height: 100vh;
+  }
+
+  /* Página sin bottom nav (ej: login) */
+  .page-content-full {
+    min-height: 100vh;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+  }
+}

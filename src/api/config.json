@@ -1,0 +1,16 @@
+{
+  "mercadoId": "mrc_001",
+  "mercadoNombre": "Mercado Central Norte",
+  "mercadoDireccion": "Av. Los Mercaderes 123, Lima",
+  "cobradorId": "usr_001",
+  "cobradorNombre": "María López",
+  "cobradorCelular": "987654321",
+  "version": "2.4.0",
+  "moneda": "S/",
+  "zonaHoraria": "America/Lima",
+  "diasSemana": ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
+  "mesesAnio": [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ]
+}

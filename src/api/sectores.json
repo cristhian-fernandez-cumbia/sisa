@@ -1,0 +1,39 @@
+{
+  "sectores": [
+    {
+      "id": "sec_A",
+      "nombre": "Sector A",
+      "descripcion": "Zona Central",
+      "totalPuestos": 8,
+      "sisaBase": 3.00
+    },
+    {
+      "id": "sec_B",
+      "nombre": "Sector B",
+      "descripcion": "Norte",
+      "totalPuestos": 8,
+      "sisaBase": 2.50
+    },
+    {
+      "id": "sec_C",
+      "nombre": "Sector C",
+      "descripcion": "Feria",
+      "totalPuestos": 8,
+      "sisaBase": 2.00
+    },
+    {
+      "id": "sec_D",
+      "nombre": "Sector D",
+      "descripcion": "Sur",
+      "totalPuestos": 8,
+      "sisaBase": 1.50
+    },
+    {
+      "id": "sec_E",
+      "nombre": "Sector E",
+      "descripcion": "Pasillo",
+      "totalPuestos": 6,
+      "sisaBase": 1.00
+    }
+  ]
+}

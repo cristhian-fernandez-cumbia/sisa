@@ -1,0 +1,51 @@
+{
+  "puestos": [
+    { "id": "pst_A01",  "codigo": "A01", "sectorId": "sec_A", "tamano": "Grande",  "estado": "deuda",    "inquilinoId": "soc_001", "sisaDiaria": 3.00, "orden": 1  },
+    { "id": "pst_A02",  "codigo": "A02", "sectorId": "sec_A", "tamano": "Grande",  "estado": "pagado",   "inquilinoId": "soc_002", "sisaDiaria": 3.00, "orden": 2  },
+    { "id": "pst_A03",  "codigo": "A03", "sectorId": "sec_A", "tamano": "Mediano", "estado": "atendido", "inquilinoId": "soc_003", "sisaDiaria": 3.00, "orden": 3  },
+    { "id": "pst_A04",  "codigo": "A04", "sectorId": "sec_A", "tamano": "Mediano", "estado": "deuda",    "inquilinoId": "soc_004", "sisaDiaria": 3.00, "orden": 4  },
+    { "id": "pst_A05",  "codigo": "A05", "sectorId": "sec_A", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 2.00, "orden": 5  },
+    { "id": "pst_A06",  "codigo": "A06", "sectorId": "sec_A", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 2.00, "orden": 6  },
+    { "id": "pst_A07",  "codigo": "A07", "sectorId": "sec_A", "tamano": "Grande",  "estado": "pagado",   "inquilinoId": "soc_012", "sisaDiaria": 5.00, "orden": 7  },
+    { "id": "pst_A08",  "codigo": "A08", "sectorId": "sec_A", "tamano": "Grande",  "estado": "pagado",   "inquilinoId": "soc_016", "sisaDiaria": 5.00, "orden": 8  },
+    { "id": "pst_A12",  "codigo": "A12", "sectorId": "sec_A", "tamano": "Grande",  "estado": "pagado",   "inquilinoId": "soc_012", "sisaDiaria": 5.00, "orden": 9  },
+    { "id": "pst_A01B", "codigo": "A01", "sectorId": "sec_A", "tamano": "Grande",  "estado": "pagado",   "inquilinoId": "soc_016", "sisaDiaria": 5.00, "orden": 10 },
+    { "id": "pst_A04B", "codigo": "A04", "sectorId": "sec_A", "tamano": "Mediano", "estado": "deuda",    "inquilinoId": "soc_017", "sisaDiaria": 2.00, "orden": 11 },
+
+    { "id": "pst_B01",  "codigo": "B01", "sectorId": "sec_B", "tamano": "Mediano", "estado": "pagado",   "inquilinoId": "soc_005", "sisaDiaria": 2.50, "orden": 1  },
+    { "id": "pst_B02",  "codigo": "B02", "sectorId": "sec_B", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 2  },
+    { "id": "pst_B03",  "codigo": "B03", "sectorId": "sec_B", "tamano": "Mediano", "estado": "pagado",   "inquilinoId": "soc_006", "sisaDiaria": 2.50, "orden": 3  },
+    { "id": "pst_B04",  "codigo": "B04", "sectorId": "sec_B", "tamano": "Mediano", "estado": "pagado",   "inquilinoId": "soc_007", "sisaDiaria": 2.50, "orden": 4  },
+    { "id": "pst_B05",  "codigo": "B05", "sectorId": "sec_B", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 5  },
+    { "id": "pst_B06",  "codigo": "B06", "sectorId": "sec_B", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 6  },
+    { "id": "pst_B12",  "codigo": "B12", "sectorId": "sec_B", "tamano": "Mediano", "estado": "deuda",    "inquilinoId": "soc_008", "sisaDiaria": 2.50, "orden": 7  },
+    { "id": "pst_B21",  "codigo": "B21", "sectorId": "sec_B", "tamano": "Grande",  "estado": "pagado",   "inquilinoId": "soc_014", "sisaDiaria": 3.00, "orden": 8  },
+
+    { "id": "pst_C01",  "codigo": "C01", "sectorId": "sec_C", "tamano": "Mediano", "estado": "atendido", "inquilinoId": "soc_009", "sisaDiaria": 2.00, "orden": 1  },
+    { "id": "pst_C02",  "codigo": "C02", "sectorId": "sec_C", "tamano": "Pequeño", "estado": "atendido", "inquilinoId": "soc_010", "sisaDiaria": 2.00, "orden": 2  },
+    { "id": "pst_C03",  "codigo": "C03", "sectorId": "sec_C", "tamano": "Mediano", "estado": "deuda",    "inquilinoId": "soc_011", "sisaDiaria": 2.00, "orden": 3  },
+    { "id": "pst_C04",  "codigo": "C04", "sectorId": "sec_C", "tamano": "Pequeño", "estado": "atendido", "inquilinoId": "soc_013", "sisaDiaria": 2.00, "orden": 4  },
+    { "id": "pst_C05",  "codigo": "C05", "sectorId": "sec_C", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 5  },
+    { "id": "pst_C06",  "codigo": "C06", "sectorId": "sec_C", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 6  },
+    { "id": "pst_C07",  "codigo": "C07", "sectorId": "sec_C", "tamano": "Mediano", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 2.00, "orden": 7  },
+    { "id": "pst_C08",  "codigo": "C08", "sectorId": "sec_C", "tamano": "Mediano", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 2.00, "orden": 8  },
+    { "id": "pst_C15",  "codigo": "C15", "sectorId": "sec_C", "tamano": "Mediano", "estado": "deuda",    "inquilinoId": "soc_018", "sisaDiaria": 2.00, "orden": 9  },
+
+    { "id": "pst_D01",  "codigo": "D01", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "pagado",   "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 1  },
+    { "id": "pst_D02",  "codigo": "D02", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "pagado",   "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 2  },
+    { "id": "pst_D03",  "codigo": "D03", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "pagado",   "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 3  },
+    { "id": "pst_D04",  "codigo": "D04", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "pagado",   "inquilinoId": null,      "sisaDiaria": 1.50, "orden": 4  },
+    { "id": "pst_D05",  "codigo": "D05", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 5  },
+    { "id": "pst_D06",  "codigo": "D06", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 6  },
+    { "id": "pst_D07",  "codigo": "D07", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 7  },
+    { "id": "pst_D08",  "codigo": "D08", "sectorId": "sec_D", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 8  },
+    { "id": "pst_D09",  "codigo": "D09", "sectorId": "sec_D", "tamano": "Mediano", "estado": "atendido", "inquilinoId": "soc_015", "sisaDiaria": 1.50, "orden": 9  },
+
+    { "id": "pst_E01",  "codigo": "E01", "sectorId": "sec_E", "tamano": "Pequeño", "estado": "pagado",   "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 1  },
+    { "id": "pst_E02",  "codigo": "E02", "sectorId": "sec_E", "tamano": "Pequeño", "estado": "pagado",   "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 2  },
+    { "id": "pst_E03",  "codigo": "E03", "sectorId": "sec_E", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 3  },
+    { "id": "pst_E04",  "codigo": "E04", "sectorId": "sec_E", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 4  },
+    { "id": "pst_E05",  "codigo": "E05", "sectorId": "sec_E", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 5  },
+    { "id": "pst_E06",  "codigo": "E06", "sectorId": "sec_E", "tamano": "Pequeño", "estado": "libre",    "inquilinoId": null,      "sisaDiaria": 1.00, "orden": 6  }
+  ]
+}

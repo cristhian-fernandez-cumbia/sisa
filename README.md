@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Aquí tienes tu contenido listo para pegar directamente en `README.md` con formato **Markdown limpio y bien organizado** 👇
 
-## Getting Started
+---
 
-First, run the development server:
+````markdown
+# 🏗️ Arquitectura — SISA Control de Cobros (Next.js Frontend)
+
+## 📁 Estructura del proyecto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+sisa-control/
+│
+├── public/
+│   ├── favicon.ico
+│   └── logo-sisa.png
+│
+├── src/
+│   │
+│   ├── api/                          # Data JSON (reemplazables por API real)
+│   │   ├── auth.json
+│   │   ├── socios.json
+│   │   ├── puestos.json
+│   │   ├── sectores.json
+│   │   ├── cobros.json
+│   │   ├── asistencias.json
+│   │   └── config.json
+│   │
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   │
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── layout/
+│   │   ├── dashboard/
+│   │   ├── map/
+│   │   ├── puesto/
+│   │   ├── ticket/
+│   │   ├── stats/
+│   │   ├── deudores/
+│   │   ├── historial/
+│   │   └── auth/
+│   │
+│   ├── hooks/
+│   ├── interfaces/
+│   ├── redux/
+│   ├── screens/
+│   ├── styles/
+│   ├── themes/
+│   └── utils/
+│
+├── app/                              # Next.js App Router
+│
+├── tailwind.config.ts
+├── next.config.ts
+├── tsconfig.json
+└── package.json
+````
+
+---
+
+## 📦 Dependencias clave
+
+```json
+{
+  "dependencies": {
+    "next": "15.x",
+    "react": "19.x",
+    "react-dom": "19.x",
+    "@reduxjs/toolkit": "^2.x",
+    "react-redux": "^9.x",
+    "tailwindcss": "^3.x",
+    "recharts": "^2.x",
+    "react-hot-toast": "^2.x",
+    "jspdf": "^2.x",
+    "html2canvas": "^1.x",
+    "clsx": "^2.x"
+  }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔄 Flujo de datos (localStorage)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+seedData.ts (carga inicial)
+       ↓
+localStorage keys:
+  "sisa_socios"
+  "sisa_puestos"
+  "sisa_sectores"
+  "sisa_cobros"
+  "sisa_asistencias"
+  "sisa_config"
+  "sisa_auth"
+       ↓
+Redux slices (estado en memoria)
+       ↓
+Screens → Components
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Responsividad (Tailwind)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+sm  (640px)  → Móvil: layout centrado max-w-sm, bottom nav
+md  (768px)  → Tablet: max-w-2xl, side nav colapsable
+lg  (1024px) → Desktop: side nav fijo, contenido en 2 columnas
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Descripción
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**SISA Control de Cobros** es una aplicación frontend desarrollada con Next.js que permite:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Gestión de socios e inquilinos
+* Control de cobros diarios
+* Registro de asistencias
+* Visualización de deuda
+* Estadísticas por período
+* Generación de tickets
+
+---
+
+## 🧠 Arquitectura
+
+* **Frontend:** Next.js (App Router)
+* **Estado global:** Redux Toolkit
+* **Persistencia:** localStorage
+* **UI:** TailwindCSS + componentes reutilizables
+* **Gráficas:** Recharts
+* **Exportación:** jsPDF + html2canvas
+
+---
+
+## ⚙️ Ejecución local
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🔐 Credenciales demo
+
+```
+Usuario: sisa@gmail.com
+Password: 12345
+```
+
+```
+
+---
+
+Si quieres, en el siguiente paso puedo ayudarte a hacerlo más pro 🔥:
+- agregar badges (build, version, etc.)
+- poner screenshots del sistema
+- o dejarlo listo para portafolio tipo senior 😎
+```

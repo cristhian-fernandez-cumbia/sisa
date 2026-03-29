@@ -9,27 +9,31 @@ export const loginThunk = createAsyncThunk<
   Omit<User, 'password'>,
   LoginCredentials,
   { rejectValue: string }
->('auth/login', async (credentials, { rejectWithValue }) => {
-  // Simula latencia de red
-  await new Promise((r) => setTimeout(r, 600));
+>(
+  'auth/login',
+  async (credentials, { rejectWithValue }) => {
+    await new Promise((r) => setTimeout(r, 600));
 
-  const users = getAuthUsers();
-  const found = users.find(
-    (u) =>
-      u.email.toLowerCase() === credentials.email.toLowerCase() &&
-      u.password === credentials.password,
-  );
+    const users = getAuthUsers() as User[];
+    const found = users.find(
+      (u) =>
+        u.email.toLowerCase() === credentials.email.toLowerCase() &&
+        u.password === credentials.password,
+    );
 
-  if (!found) return rejectWithValue('Credenciales incorrectas. Verifica tu email y contraseña.');
+    if (!found) return rejectWithValue('Credenciales incorrectas. Verifica tu email y contraseña.');
 
-  const { password: _pw, ...safeUser } = found;
-  return safeUser;
-});
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { password: _pw, ...safeUser } = found;
+    return safeUser;
+  },
+);
 
 // ── Estado inicial ─────────────────────────────────────────────────────────────
-const persistedUser = typeof window !== 'undefined'
-  ? getFromStorage<Omit<User, 'password'>>(LS_KEYS.AUTH)
-  : null;
+const persistedUser =
+  typeof window !== 'undefined'
+    ? getFromStorage<Omit<User, 'password'>>(LS_KEYS.AUTH)
+    : null;
 
 const initialState: AuthState = {
   user:            persistedUser,
